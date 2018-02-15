@@ -21,4 +21,21 @@ sudo ./cuda_8.0.61_375.26_linux-run
 export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
-# Remember to reboot computer after completion!
+# Download CUDA and CUDAnn
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn6_6.0.21-1%2Bcuda8.0_amd64.deb
+wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn6-dev_6.0.21-1%2Bcuda8.0_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
+sudo dpkg -i libcudnn6_6.0.21-1+cuda8.0_amd64.deb
+sudo dpkg -i libcudnn6-dev_6.0.21-1+cuda8.0_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda=8.0.61-1
+sudo apt-get install libcudnn6-dev
+
+# ADd folders to PATH
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+# Note: Remember to reboot computer after completion!
+
+# Note: Add lines beginning with export to ~/.bashrc file 
