@@ -2,13 +2,13 @@
 #!/bin/sh
 
 # Install conda
-#cd temp
-#curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
-#bash Anaconda3-5.0.1-Linux-x86_64.sh -yes
+bash Anaconda3-5.0.1-Linux-x86_64.sh -yes
+export PATH="/home/khalid18/anaconda3/bin"
 source ~/.bashrc
 
 # Create a virtual environment
-conda create -n "venv-kaggle" python=3.6
+conda create -n "venv-capsnet" python=3.6
+source activate venv-capsnet
 
 # Setup nvidia and cuda scripts
 sudo add-apt-repository ppa:graphics-drivers/ppa
