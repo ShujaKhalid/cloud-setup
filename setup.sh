@@ -3,7 +3,7 @@
 
 # Install conda
 bash Anaconda3-5.0.1-Linux-x86_64.sh -yes
-export PATH="/home/khalid18/anaconda3/bin"
+export PATH="/home/khalid18/anaconda3/bin":$PATH
 source ~/.bashrc
 
 # Create a virtual environment
