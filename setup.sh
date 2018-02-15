@@ -32,7 +32,7 @@ sudo apt-get update
 sudo apt-get install cuda=8.0.61-1
 sudo apt-get install libcudnn6-dev
 
-# ADd folders to PATH
+# Add folders to PATH
 export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
