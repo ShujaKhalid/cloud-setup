@@ -3,12 +3,12 @@
 
 # Install conda
 bash Anaconda3-5.0.1-Linux-x86_64.sh -yes
-export PATH="/home/khalid18/anaconda3/bin":$PATH
+export PATH="/home/%USER_NAME%/anaconda3/bin":$PATH # Where %USER_NAME% is your user name! 
 source ~/.bashrc
 
 # Create a virtual environment
-conda create -n "venv-capsnet" python=3.6
-source activate venv-capsnet
+conda create -n "venv" python=3.6 # Where "venv" is your virtual environment
+source activate venv # Where "venv" is your virtual environment
 
 # Setup nvidia and cuda scripts
 sudo add-apt-repository ppa:graphics-drivers/ppa
